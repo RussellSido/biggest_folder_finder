@@ -13,9 +13,10 @@ public class Main {
 //        System.exit(0);
 //        System.out.println(getSizeFromHumanReadable("235K"));
 //        System.exit(0);
-        String folderPath = "D:\\Программы\\вивер";
+        String folderPath = "D:\\Программы";
+        long sizeLimit = 50* 1024 * 1024;
         File file = new File(folderPath);
-        Node root = new Node(file);
+        Node root = new Node(file, sizeLimit);
          long start = System.currentTimeMillis();
 //        System.out.println(getFolderSize(file));
         FolderSizeCalculator calculator = new FolderSizeCalculator(root);
